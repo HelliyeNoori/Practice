@@ -1,0 +1,32 @@
+.sidebar {
+    position: fixed;
+    width: 106px;
+    height: 1982px;
+    top: 95px;
+    /* left: 1334px;  ba in left jash okey nabood*/ 
+    left: 1420px;
+    width: 100px; /* عرض سایدبار */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #101828;
+    z-index: 1000; /* اگر نیاز به اولویت بندی در لایه‌ها دارید */
+  }
+  
+  .sideimagetop{
+    width: 48px;
+    height: 46px;
+    margin-top: 30px;
+    margin-left: 10px; /*ba tavajoh b taghire LEFT inam taghir dadam*/
+    border-radius: 6px;
+    padding: 8px 12px 8px 12px;
+    gap: 8px;
+  }
+  
+  .sideimageup{
+    width: 46px;
+    height: 626px;
+    margin-top: 5px; /*taghir dadam*/
+    margin-left: 10px; /*ba tavajoh b taghire LEFT inam taghir dadam*/
+
+  }

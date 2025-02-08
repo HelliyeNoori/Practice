@@ -1,14 +1,23 @@
 import Navbar from "@/components/Navbar/navbar";
 import AuthBox from "@/components/AuthBox/AuthBox";
-import "./Index.css";
+import CryptoPriceBox from "@/components/CryptoPriceBox/CryptoPriceBox";
+import styles from "@/styles/Index.module.css";
+import Sidebox from '../components/Sidebox'
+
 
 export default function Home() {
   return (
-    <div className="home-container">
+    <div className={styles["container"]}>
       <Navbar />
-      <main>
-        <AuthBox />
+      <AuthBox />
+      <main className={styles["main-content"]}>
+        <CryptoPriceBox />
       </main>
+      <div>
+      <Sidebox />
     </div>
+    </div>
+    
   );
 }
+

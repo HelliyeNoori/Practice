@@ -1,0 +1,19 @@
+.crypto-box {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.crypto-box:hover {
+  transform: scale(1.05);
+}
+
+.crypto-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
