@@ -1,0 +1,157 @@
+/* تنظیمات عمومی */
+.body { 
+  direction: rtl;
+  font-family: peyda;
+  background-color: #0f172a; /* پس زمینه تیره */
+  color: #e5e7eb; /* رنگ متن روشن */
+  margin: 0;
+  padding: 0;
+}
+
+/* ساختار اصلی گرید */
+.container {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto; /* گرید برای ردیف‌های مختلف */
+  grid-template-columns: 1100px 1fr 1fr 1fr 1fr 1fr 1fr; /* مشخص کردن عرض سایدبار و فضای دیگر */
+  gap: 10px;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* استایل نوار ناوبری */
+.navbar {
+  grid-column: span 7;
+  background-color: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* استایل بخش احراز هویت */
+.auth-box {
+  grid-column: 3 / span 4;  /*قرار گرفتن در میان ستون‌ها */
+  grid-row: 6;
+  background-color: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* سایدبار */
+.sidebar {
+  grid-column: 1 / span 2; /* عرض سایدبار */
+  grid-row: 1 / 7;; /* قرار گرفتن در ردیف دوم */
+  background: #111827;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* استایل تصاویر در سایدبار */
+.sidebar img {
+  width: 80px; /* عرض تصاویر */
+  height: 80px; /* ارتفاع تصاویر */
+  margin-bottom: 5px; /* فاصله بین تصاویر */
+  object-fit: cover; /* حفظ نسبت ابعاد تصویر */
+}
+
+/* بخش اصلی محتوا */
+.main-content {
+  grid-column: 2 / span 4; /* فضای محتوا که کنار سایدبار قرار می‌گیرد */
+  grid-row: 2 ; /* از ردیف دوم تا ردیف چهارم */
+  gap: 10px;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+/* تنظیم استایل crypto-box */
+.crypto-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* تنظیم صحیح چیدمان */
+  gap: 20px;
+  background: #1e293b;
+  width: 192px;
+  height: 137;
+  max-width: 900px;
+  margin: auto;
+}
+
+.crypto-item {
+  background: #0f172a;
+  width: 192px;
+  height: 107px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.crypto-item img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 760px) {
+  .crypto-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .crypto-item {
+    width: 45%; /* دو آیتم در هر ردیف */
+  }
+}
+
+/* باکس معاملات */
+.trade-box {
+  grid-column: 6 / span 2;
+  grid-row: 3 / span 2;
+  background: #2563eb;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* باکس‌های پایین */
+.user-level {
+  grid-column: 3 / span 3;
+  grid-row: 4;
+  background: #f59e0b;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* جدول نرخ ارز */
+.rates-table {
+  grid-column: 3 / span 5;
+  grid-row: 5;
+  background: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.rates-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rates-table th, .rates-table td {
+  border: 1px solid #334155;
+  padding: 10px;
+  text-align: center;
+}
