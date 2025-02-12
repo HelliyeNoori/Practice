@@ -4,6 +4,7 @@ import CryptoPriceBox from "@/components/CryptoPriceBox/CryptoPriceBox";
 import styles from "@/styles/Index.module.css";
 import CryptoDashboard from "../components/CryptoDashboard";
 import Sidebox from '../components/Sidebox'
+import TradeBox from "../components/TradeBox";
 
 
 export default function Home() {
@@ -11,15 +12,16 @@ export default function Home() {
     <div className={styles["container"]}>
       <Navbar />
       <AuthBox />
-      <main className={styles["main-content"]}>
-        <CryptoPriceBox />
-        <CryptoDashboard />
-      </main>
-      <div>
+      <div className={styles.mainContent}>
+        <div className={styles.dashboardSection}>
+          <CryptoPriceBox />
+          <CryptoDashboard />
+        </div>
+        <TradeBox />
+      </div>
       <Sidebox />
+    </div>
 
-    </div>
-    </div>
     
   );
 }

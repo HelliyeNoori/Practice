@@ -1,42 +1,42 @@
-/* تنظیمات عمومی */
+
 .body { 
   direction: rtl;
   font-family: peyda;
-  background-color: #0f172a; /* پس زمینه تیره */
-  color: #e5e7eb; /* رنگ متن روشن */
+  background-color: #0f172a; 
+  color: #e5e7eb; 
   margin: 0;
-  box-sizing: border-box; /* اطمینان از اینکه padding و border در اندازه‌های کل عنصر لحاظ شوند */
 }
 
-/* تنظیمات برای صفحه‌های بزرگتر از 1024px (دسکتاپ) */
+/*desktop*/
 @media (min-width: 1024px) {
   .body {
-    padding: 40px; /* فضای بیشتر در اطراف صفحه برای دسکتاپ */
+    padding: 40px; 
   }
 
   .container {
-    max-width: 1200px; /* عرض حداکثر برای container */
+    max-width: 1200px;
   }
 }
 
-/* تنظیمات برای صفحه‌های کوچکتر از 768px (موبایل و تبلت) */
+/*mobile*/
 @media (max-width: 768px) {
   .body {
-    padding: 15px; /* کاهش فضای padding در موبایل برای استفاده بهینه از فضا */
+    padding: 15px; 
   }
 
 
-/* ساختار اصلی گرید */
+/* Grid in DIV bakhshish ezafe bood !!!*/
 .container {
-  display: grid;
-  /*grid-template-rows: auto auto auto auto auto auto auto; /* گرید برای ردیف‌های مختلف */
-  /*grid-template-columns: 1100px 1fr 1fr 1fr 1fr 1fr 1fr; /* مشخص کردن عرض سایدبار و فضای دیگر */
-  gap: 10px;
-  height: 100vh;
+  direction: rtl;
+  font-family: peyda;
+  background-color: #0f172a;
+  color: #e5e7eb;
+  margin: 0;
   padding: 20px;
+  /*grid-template-rows: auto auto auto auto auto auto auto; */
+  /*grid-template-columns: 1100px 1fr 1fr 1fr 1fr 1fr 1fr; */
 }
 
-/* استایل نوار ناوبری */
 .navbar {
   grid-column: span 7;
   background-color: #1e293b;
@@ -46,10 +46,7 @@
   border-radius: 8px;
 }
 
-/* استایل بخش احراز هویت */
 .auth-box {
-  grid-column: 3 / span 4;  /*قرار گرفتن در میان ستون‌ها */
-  grid-row: 6;
   background-color: #1e293b;
   color: white;
   text-align: center;
@@ -57,10 +54,7 @@
   border-radius: 8px;
 }
 
-/* سایدبار */
 .sidebar {
-  grid-column: 1 / span 2; /* عرض سایدبار */
-  grid-row: 1 / 7;; /* قرار گرفتن در ردیف دوم */
   background: #111827;
   color: white;
   border-radius: 8px;
@@ -69,22 +63,21 @@
   gap: 10px;
 }
 
-/* استایل تصاویر در سایدبار */
+
 .sidebar img {
-  width: 80px; /* عرض تصاویر */
-  height: 80px; /* ارتفاع تصاویر */
-  margin-bottom: 5px; /* فاصله بین تصاویر */
-  object-fit: cover; /* حفظ نسبت ابعاد تصویر */
+  width: 80px; 
+  height: 80px; 
+  margin-bottom: 5px; 
+  object-fit: cover;
 }
 
-/* تنظیم استایل crypto-box */
 .crypto-box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; /* تنظیم صحیح چیدمان */
+  display: flex; /*ofoghi*/
+  flex-wrap: nowrap; /*khate baad nare*/
+  justify-content: space-between; /*mosavi taghsim beshe*/
   gap: 20px;
   background: #1e293b;
-  width: 100%;  /* عرض به 100% تغییر کرد */
+  width: 100%;  
   max-width: 900px;
   margin: auto;
 }
@@ -114,48 +107,108 @@
   }
 
   .crypto-item {
-    width: 45%; /* دو آیتم در هر ردیف */
+    width: 45%; 
   }
 }
 
-.crypto-dashboard {
-  display: flex;
-  flex-direction: row; /* قرار دادن جدول و نمودار در یک ردیف */
-  justify-content: space-between; /* فاصله‌گذاری بین جدول و نمودار */
-  overflow: hidden; /* جلوگیری از اسکرول افقی */
-  background: #101828;
-  border-radius: 16px;
+
+.tradeBox {
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
-/* تنظیمات برای بخش‌های داخلی */
-.crypto-dashboard .tableSection,
-.crypto-dashboard .chartSection {
+.tabContainer {
   display: flex;
-  flex-direction: row; /* قرار دادن جدول و نمودار در یک ردیف */
   justify-content: space-between;
-  gap: 24px;
+  margin-bottom: 16px;
 }
 
-.crypto-dashboard .tableSection {
-  width: 380px;
-  height: 347px;
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
 }
 
-.crypto-dashboard .chartSection {
-  width: 304px;
-  height: 447px;
+.tab.active {
+  border-bottom: 2px solid #007bff;
+  color: #007bff;
 }
 
-/* برای صفحه‌های کوچک‌تر (واکنش‌گرا) */
+.input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+
 @media (max-width: 768px) {
-  .crypto-dashboard {
-    flex-direction: column; /* در اندازه‌های کوچک‌تر چیدمان به صورت ستونی تغییر می‌کند */
+  .container {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .crypto-dashboard .tableSection,
-  .crypto-dashboard .chartSection {
+  .crypto-dashboard,
+  .crypto-pricebox,
+  .tradeBox {
     width: 100%;
-    margin: 0;
+    margin-bottom: 20px;
   }
 }
+}
+
+/*  kenare ham gharar gereftane CryptoDashboard&Tradebox */
+.mainContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; /*chidemane chap b rast*/
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+  margin: auto;
+}
+
+.dashboardSection  {
+  flex: 2; /*2 barabare faza*/
+  max-width: 0;
+}
+
+
+.tradeSection {
+  flex: 1; 
+  max-width: 0;
+}
+
+/* MOBILE zire yekdigar*/
+@media (max-width: 768px) {
+  .mainContent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dashboardSection,
+  .tradeSection {
+    width: 100%;
+  }
 }

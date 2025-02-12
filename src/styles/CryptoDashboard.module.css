@@ -1,3 +1,7 @@
+/* baraye eslahe code eshtebahan CSS hazf karda*/
+/* majboor shodam LOCAL bezaram*/
+/* jologiri az tadakhol CLASS*/
+
 :local(.dashboardContainer) {
     display: flex;
     flex-direction: row;
@@ -5,30 +9,28 @@
     flex-wrap: nowrap;
     gap: 24px;
     width: 840px;
-    height: 495px; /* حذف مقدار height ثابت */
-    margin-top: 40px;
+    height: 495px; 
+    margin-top: 20px;
     margin-left: 470px;
     background-color: #101828;
     border: 1px solid #E9E9E9;
     border-radius: 16px;
     box-shadow: -2px 2px 15px -1px rgba(0, 0, 0, 0.1);
-    padding: 20px; /* اضافه کردن padding برای نمایش بهتر */
+    padding: 20px; 
 }
 
-/* استایل بخش جدول */
 :local(.tableSection) {
     display: flex;
-    flex-direction: column; /* تغییر به ستون برای نمایش h3 در بالا */
+    flex-direction: column; 
     width: 380px;
     height: 347px;
     margin-left: 20px;
     margin-right: 80px; /* ino dasti ezafe kardam baraye b chap keshidan*/
-    gap: 16px; /* کاهش فاصله داخلی */
+    gap: 16px; 
 }
 
 .tableSection h3 {
-    width: 100%; /* عرض کامل برای نمایش بهتر */
-    font-family: peyda;
+    width: 100%; 
     font-size: 18px;
     text-align: right;
     line-height: 22.5px;
@@ -42,7 +44,7 @@
     border-radius: 108px;
 }
 
-/* تنظیمات جدول */
+
 :local(table) {
     direction: rtl;
     width: 100%;
@@ -56,7 +58,7 @@
     color: #FFFFFF;
 }
 
-/* دکمه‌ها زیر جدول */
+
 :local(.buttonContainer) {
     display: flex;
     justify-content: flex-start;
@@ -84,10 +86,10 @@
     color: white;
 }
 
-/* استایل بخش نمودار */
+
 :local(.chartSection) {
     display: flex;
-    flex-direction: column; /* نمایش h3 بالای نمودار */
+    flex-direction: column; 
     align-items: center;
     justify-content: flex-start;
     width: 304px;
@@ -112,7 +114,7 @@
 }
 
 
-/* تنظیمات موبایل */
+/* mobile*/
 @media (max-width: 768px) {
     :local(.dashboardContainer) {
         flex-direction: column;
