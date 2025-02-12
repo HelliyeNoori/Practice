@@ -33,7 +33,7 @@
     line-height: 19.6px;
     text-align: right;
     white-space: nowrap;
-    flex-direction: row-reverse; /* قرار گرفتن سمت راست */
+    flex-direction: row-reverse; 
 
 
   }
