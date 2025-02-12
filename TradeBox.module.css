@@ -1,0 +1,179 @@
+.tradeBox {
+    width: 422px; /*ino nagerefte nemidoonam chera*/
+    height: 656px;
+    border-radius: 16px;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    background-color: #101828  ;
+    margin-top: 50px; /*tagir dadam*/
+    margin-left: 24px;
+    margin-right: 850px; /* baraye inke chap biofte*/
+    flex-shrink:0;
+
+  }
+  
+  .tabContainer {
+    display: flex;
+    justify-content: space-between;
+    font-family: peyda;
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+    width: 240px; /*width asli 325px khorde*/
+    height: 40px; /*taghir dadam*/
+    margin-top: 96px;
+    margin-left: 40.69px;
+    margin-bottom: 16px;
+  }
+
+  
+  .tab.active {
+    border-bottom: 1px solid #007bff;
+    color: #007bff;
+  }
+ 
+
+  .tradeInfoRow {
+    display: flex;
+    align-items: center; 
+    direction: rtl;
+    height: 20px;
+    gap: 40px;
+    margin-right: 15px; /*khodam taeen kardam*/
+    color: #CFD4D2;
+    margin-bottom: 8px;
+    margin-top: 20px;/*ino khodam gozashtam*/
+  }
+  
+  .textTradeBox label {
+    font-family: peyda;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17.33px;
+    
+  }
+
+  .balanceContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .textTradeBox p {
+    font-size: 14px;
+    font-family: peyda;
+    font-weight: 400;
+    line-height: 17.33px;
+    color: #CFD4D2;
+    
+  }
+  
+  .IconTrade {
+    width: 20px; 
+    height: 20px; 
+    object-fit: contain;
+  }
+
+  
+  .input {
+    direction: rtl;
+    background-color: #101828  ;
+    width: 310px;
+    height: 48px;
+    color: #505656;
+    font-family: peyda;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.33px;
+    border: 1px solid #505656   ;
+    padding-right: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 8px 0px rgba(165, 165, 165, 0.08);
+  }
+  
+  
+  .inputMiddleIcon label {
+    width: 81px;
+    height: 20px;
+    font-family: peyda;
+    direction: rtl;
+    font-size: 14px;
+    line-height: 19.6px;
+    font-weight: 400;
+    margin-left: 230px; /*text-align:right amal nakard*/
+    color: #FFFFFF;
+  }
+  
+  .IconTradeInput{
+    width: 32px;
+    height: 32px;
+    margin-top: 30px;
+    margin-left: 140px;
+    margin-bottom: 40px;
+  }
+
+  .button {
+    width: 310px;
+    height: 40px;
+    background-color: #0257EA;
+    color: white;
+    padding: 8px 16px 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    gap: 8px;
+    margin-left: 5px;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+
+  .footertradebox{
+    display: flex;
+    align-items: center; 
+    direction: rtl;
+    flex-wrap: nowrap;
+    gap: 230px;
+    margin-top: 10px;
+    margin-right: 12px;
+    color: #FFFFFF;
+  }
+
+  .Iconfootertradebox {
+  width: 24px;
+  height: 24px;
+  }
+  
+/*mobile*/
+  @media (max-width: 768px) {
+    .tradeBox {
+      width: 100%; 
+      padding: 12px;
+    }
+  
+    .tabContainer {
+      flex-direction: column; 
+      align-items: center;
+    }
+  
+    .tab {
+      margin-bottom: 8px; 
+    }
+  
+    .input, .button {
+      padding: 10px; 
+    }
+  }
+  
+/*Desktop*/
+  @media (min-width: 1024px) {
+    .tradeBox {
+      width: 320px; 
+      padding: 16px; 
+    }
+  
+    .tabContainer {
+      justify-content: space-between; 
+    }
+  }
+  

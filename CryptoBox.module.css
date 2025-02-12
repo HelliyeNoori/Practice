@@ -1,14 +1,16 @@
 .cryptoContainer {
   display: flex;
-  flex-direction: row; /* مربع‌ها در یک ردیف افقی قرار می‌گیرند */
-  justify-content: flex-end; /* مربع‌ها از چپ به راست چیده می‌شوند */
-  gap: 20px;
-  max-width: 900px;
-  margin: 0 auto;
-  flex-wrap: nowrap; /* از پخش شدن مربع‌ها در خطوط مختلف جلوگیری می‌کند */
+  flex-direction: row; /* too ye radif */
+  justify-content: flex-end; /* az chap b rast */
+  gap: 24px;
+  width: 840px;
+  height: 137px;
+  margin-top: 50px; /*taghir dadam*/
+  margin-left: 470px; 
+  flex-wrap: nowrap; 
 }
 
-/* استایل هر آیتم (مربع اصلی) */
+
 .cryptoItem {
   direction: rtl;
   position: relative;
@@ -17,22 +19,17 @@
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* قرار دادن اطلاعات در پایین */
+  justify-content: flex-end; 
   align-items: center;
-  padding-bottom: 15px;
   text-align: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+  box-shadow: -2px 2px 15px -1px rgba(0, 0, 0, 0.1);
 }
 
-.cryptoItem:hover {
-  transform: scale(1.05);
-}
 
-/* استایل باکس تصویر (نیمه بیرون از مربع) */
+
 .cryptoIconWrapper {
   position: absolute;
-  top: -15px; /* نصف تصویر بیرون از مربع */ /*dayere var shodane balaye moraba*/
+  top: -15px;  /*dayere var shodane balaye moraba*/
   width: 60px;
   height: 60px;
   background-color: white;
@@ -43,13 +40,13 @@
   box-shadow: -2px 2px 15px -1px rgba(0, 0, 0, 0.1);
 }
 
-/* استایل تصویر لوگو */
+
 .cryptoIcon {
   width: 59.65px;
   height: 59.23px;
 }
 
-/* استایل بخش اطلاعات */
+
 .cryptoInfo {
   margin-top: 20px;
   width: 192px;
@@ -75,7 +72,7 @@
   color: #E7E9E8;
 }
 
-/* تنظیمات واکنش‌گرا برای موبایل */
+/*  mobile */
 @media (max-width: 760px) {
   .cryptoContainer {
     display: grid;
@@ -84,7 +81,7 @@
   }
 
   .cryptoItem {
-    width: 182px; /* تنظیم اندازه برای موبایل */
+    width: 182px; 
     height: 137px;
   }
 
