@@ -10,14 +10,21 @@ interface CryptoBoxProps {
 
 const CryptoBox: React.FC<CryptoBoxProps> = ({ name, symbol, price, image }) => {
   return (
-    <div className={styles["crypto-box"]}>
-      <img src={image} alt={name} className={styles["crypto-icon"]} />
-      <h3>{name} ({symbol.toUpperCase()})</h3>
-      <p>${price.toLocaleString()}</p>
+    <div className={styles.cryptoItem}>
+      <div className={styles.cryptoIconWrapper}>
+        <img src={image} alt={name} className={styles.cryptoIcon} />
+      </div>
+      <div className={styles.cryptoInfo}>
+        <h3>{name} ({symbol.toUpperCase()})</h3>
+        <p>${price.toLocaleString()}</p>
+      </div>
     </div>
   );
 };
 
 export default CryptoBox;
+
+
+
 
 

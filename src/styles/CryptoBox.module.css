@@ -1,19 +1,102 @@
-.crypto-box {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 15px;
+.cryptoContainer {
+  display: flex;
+  flex-direction: row; /* مربع‌ها در یک ردیف افقی قرار می‌گیرند */
+  justify-content: flex-end; /* مربع‌ها از چپ به راست چیده می‌شوند */
+  gap: 24px;
+  width: 840px;
+  height: 137px;
+  margin-top: 50px; /*taghir dadam*/
+  margin-left: 470px; 
+  flex-wrap: nowrap; /* از پخش شدن مربع‌ها در خطوط مختلف جلوگیری می‌کند */
+}
+
+/* استایل هر آیتم (مربع اصلی) */
+.cryptoItem {
+  direction: rtl;
+  position: relative;
+  width: 192px;
+  height: 137px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* قرار دادن اطلاعات در پایین */
+  align-items: center;
   text-align: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+  box-shadow: -2px 2px 15px -1px rgba(0, 0, 0, 0.1);
 }
 
-.crypto-box:hover {
-  transform: scale(1.05);
+
+/* استایل باکس تصویر (نیمه بیرون از مربع) */
+.cryptoIconWrapper {
+  position: absolute;
+  top: -15px; /* نصف تصویر بیرون از مربع */ /*dayere var shodane balaye moraba*/
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -2px 2px 15px -1px rgba(0, 0, 0, 0.1);
 }
 
-.crypto-icon {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
+/* استایل تصویر لوگو */
+.cryptoIcon {
+  width: 59.65px;
+  height: 59.23px;
 }
+
+/* استایل بخش اطلاعات */
+.cryptoInfo {
+  margin-top: 20px;
+  width: 192px;
+  height: 107px;
+  border: 1px;
+  border-color: #E9E9E9 ;
+  background-color: #101828 ;
+  border-radius: 8px;
+}
+
+.cryptoInfo h3 {
+  direction: rtl;
+  width: 162px;
+  height: 20px;
+  margin-top: 30px;
+  gap: 23px;
+  margin-left: 20px;
+  font-family: peyda;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #E7E9E8;
+}
+
+/* تنظیمات واکنش‌گرا برای موبایل */
+@media (max-width: 760px) {
+  .cryptoContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .cryptoItem {
+    width: 182px; /* تنظیم اندازه برای موبایل */
+    height: 137px;
+  }
+
+  .cryptoIconWrapper {
+    width: 56.54px;
+    height: 59.23px;
+    top: -10px; /*dayere var shodane balaye moraba*/
+  }
+
+  .cryptoIcon {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+
+
 

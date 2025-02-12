@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CryptoBox from "./CryptoBox";
+import styles from "@/styles/CryptoBox.module.css"; // ایمپورت استایل‌ها
 
-// تعریف نوع داده‌ای برای ارز دیجیتال
 interface CryptoData {
   id: string;
   name: string;
@@ -11,17 +11,17 @@ interface CryptoData {
 }
 
 const CryptoPriceBox: React.FC = () => {
-  const [cryptoData, setCryptoData] = useState<CryptoData[]>([]); // استفاده از نوع دقیق
+  const [cryptoData, setCryptoData] = useState<CryptoData[]>([]);
 
   useEffect(() => {
     fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc")
       .then((res) => res.json())
-      .then((data: CryptoData[]) => setCryptoData(data.slice(0, 4))) // فقط ۴ ارز اول
+      .then((data: CryptoData[]) => setCryptoData(data.slice(0, 4))) // دریافت ۴ ارز برتر
       .catch((err) => console.error("Error fetching data:", err));
   }, []);
 
   return (
-    <div className="crypto-price-box">
+    <div className={styles.cryptoContainer}>
       {cryptoData.map((coin) => (
         <CryptoBox
           key={coin.id}
@@ -36,4 +36,5 @@ const CryptoPriceBox: React.FC = () => {
 };
 
 export default CryptoPriceBox;
+
 

@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar/navbar";
 import AuthBox from "@/components/AuthBox/AuthBox";
 import CryptoPriceBox from "@/components/CryptoPriceBox/CryptoPriceBox";
 import styles from "@/styles/Index.module.css";
+import CryptoDashboard from "../components/CryptoDashboard";
 import Sidebox from '../components/Sidebox'
 
 
@@ -12,9 +13,11 @@ export default function Home() {
       <AuthBox />
       <main className={styles["main-content"]}>
         <CryptoPriceBox />
+        <CryptoDashboard />
       </main>
       <div>
       <Sidebox />
+
     </div>
     </div>
     

@@ -1,18 +1,36 @@
 /* تنظیمات عمومی */
 .body { 
   direction: rtl;
-  font-family: Arial, sans-serif;
+  font-family: peyda;
   background-color: #0f172a; /* پس زمینه تیره */
   color: #e5e7eb; /* رنگ متن روشن */
   margin: 0;
-  padding: 0;
+  box-sizing: border-box; /* اطمینان از اینکه padding و border در اندازه‌های کل عنصر لحاظ شوند */
 }
+
+/* تنظیمات برای صفحه‌های بزرگتر از 1024px (دسکتاپ) */
+@media (min-width: 1024px) {
+  .body {
+    padding: 40px; /* فضای بیشتر در اطراف صفحه برای دسکتاپ */
+  }
+
+  .container {
+    max-width: 1200px; /* عرض حداکثر برای container */
+  }
+}
+
+/* تنظیمات برای صفحه‌های کوچکتر از 768px (موبایل و تبلت) */
+@media (max-width: 768px) {
+  .body {
+    padding: 15px; /* کاهش فضای padding در موبایل برای استفاده بهینه از فضا */
+  }
+
 
 /* ساختار اصلی گرید */
 .container {
   display: grid;
-  grid-template-rows: auto auto auto auto auto auto; /* گرید برای ردیف‌های مختلف */
-  grid-template-columns: 1100px 1fr 1fr 1fr 1fr 1fr 1fr; /* مشخص کردن عرض سایدبار و فضای دیگر */
+  /*grid-template-rows: auto auto auto auto auto auto auto; /* گرید برای ردیف‌های مختلف */
+  /*grid-template-columns: 1100px 1fr 1fr 1fr 1fr 1fr 1fr; /* مشخص کردن عرض سایدبار و فضای دیگر */
   gap: 10px;
   height: 100vh;
   padding: 20px;
@@ -59,74 +77,85 @@
   object-fit: cover; /* حفظ نسبت ابعاد تصویر */
 }
 
-/* بخش اصلی محتوا */
-.main-content {
-  grid-column: 3 / span 4; /* فضای محتوا که کنار سایدبار قرار می‌گیرد */
-  grid-row: 2 / span 4; /* از ردیف دوم تا ردیف چهارم */
-  display: flex;
-  gap: 10px;
-  justify-content: space-between;
-  text-align: center;
-}
-
-/* باکس‌های قیمت رمزارز */
+/* تنظیم استایل crypto-box */
 .crypto-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* تنظیم صحیح چیدمان */
+  gap: 20px;
   background: #1e293b;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease-in-out;
-  flex: 1;
-  margin: 0 10px;
+  width: 100%;  /* عرض به 100% تغییر کرد */
+  max-width: 900px;
+  margin: auto;
 }
 
-.crypto-box:hover {
-  transform: scale(1.05);
-}
-
-/* باکس معاملات */
-.trade-box {
-  grid-column: 6 / span 2;
-  grid-row: 3 / span 2;
-  background: #2563eb;
-  color: white;
-  text-align: center;
-  padding: 20px;
+.crypto-item {
+  background: #0f172a;
+  width: 192px;
+  height: 107px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   border-radius: 8px;
 }
 
-/* باکس‌های پایین */
-.user-level {
-  grid-column: 3 / span 3;
-  grid-row: 4;
-  background: #f59e0b;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  border-radius: 8px;
+.crypto-item img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
 }
 
-/* جدول نرخ ارز */
-.rates-table {
-  grid-column: 3 / span 5;
-  grid-row: 5;
-  background: #1e293b;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+@media (max-width: 760px) {
+  .crypto-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .crypto-item {
+    width: 45%; /* دو آیتم در هر ردیف */
+  }
 }
 
-.rates-table table {
-  width: 100%;
-  border-collapse: collapse;
+.crypto-dashboard {
+  display: flex;
+  flex-direction: row; /* قرار دادن جدول و نمودار در یک ردیف */
+  justify-content: space-between; /* فاصله‌گذاری بین جدول و نمودار */
+  overflow: hidden; /* جلوگیری از اسکرول افقی */
+  background: #101828;
+  border-radius: 16px;
 }
 
-.rates-table th, .rates-table td {
-  border: 1px solid #334155;
-  padding: 10px;
-  text-align: center;
+/* تنظیمات برای بخش‌های داخلی */
+.crypto-dashboard .tableSection,
+.crypto-dashboard .chartSection {
+  display: flex;
+  flex-direction: row; /* قرار دادن جدول و نمودار در یک ردیف */
+  justify-content: space-between;
+  gap: 24px;
 }
 
+.crypto-dashboard .tableSection {
+  width: 380px;
+  height: 347px;
+}
+
+.crypto-dashboard .chartSection {
+  width: 304px;
+  height: 447px;
+}
+
+/* برای صفحه‌های کوچک‌تر (واکنش‌گرا) */
+@media (max-width: 768px) {
+  .crypto-dashboard {
+    flex-direction: column; /* در اندازه‌های کوچک‌تر چیدمان به صورت ستونی تغییر می‌کند */
+  }
+
+  .crypto-dashboard .tableSection,
+  .crypto-dashboard .chartSection {
+    width: 100%;
+    margin: 0;
+  }
+}
+}

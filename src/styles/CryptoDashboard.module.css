@@ -1,0 +1,148 @@
+:local(.dashboardContainer) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 24px;
+    width: 840px;
+    height: 495px; /* حذف مقدار height ثابت */
+    margin-top: 40px;
+    margin-left: 470px;
+    background-color: #101828;
+    border: 1px solid #E9E9E9;
+    border-radius: 16px;
+    box-shadow: -2px 2px 15px -1px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* اضافه کردن padding برای نمایش بهتر */
+}
+
+/* استایل بخش جدول */
+:local(.tableSection) {
+    display: flex;
+    flex-direction: column; /* تغییر به ستون برای نمایش h3 در بالا */
+    width: 380px;
+    height: 347px;
+    margin-left: 20px;
+    margin-right: 80px; /* ino dasti ezafe kardam baraye b chap keshidan*/
+    gap: 16px; /* کاهش فاصله داخلی */
+}
+
+.tableSection h3 {
+    width: 100%; /* عرض کامل برای نمایش بهتر */
+    font-family: peyda;
+    font-size: 18px;
+    text-align: right;
+    line-height: 22.5px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.coinIcon{
+    width: 24px;
+    height: 23.83px;
+    border-radius: 108px;
+}
+
+/* تنظیمات جدول */
+:local(table) {
+    direction: rtl;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+:local(th), :local(td) {
+    padding: 10px;
+    text-align: right;
+    border-bottom: 1px solid #ddd;
+    color: #FFFFFF;
+}
+
+/* دکمه‌ها زیر جدول */
+:local(.buttonContainer) {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 30px; /*taghir dadam*/
+    margin-left: 10px; /*taghir dadam*/
+    gap: 24px;
+ 
+}
+
+:local(.button) {
+    width: 103px;
+    height: 32px;
+    padding: 8px 16px 8px 16px;
+    border: 1px solid #0257EA;
+    color: #0257EA;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+:local(.button):hover {
+    background-color: #0257EA;
+    color: white;
+}
+
+/* استایل بخش نمودار */
+:local(.chartSection) {
+    display: flex;
+    flex-direction: column; /* نمایش h3 بالای نمودار */
+    align-items: center;
+    justify-content: flex-start;
+    width: 304px;
+    height: 447px;
+    gap: 16px;
+}
+
+.chartSection h3 {
+    width: 100%;
+    font-family: peyda;
+    font-size: 20px;
+    text-align: right;
+    line-height: 28px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+:local(.chart) {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+}
+
+
+/* تنظیمات موبایل */
+@media (max-width: 768px) {
+    :local(.dashboardContainer) {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    :local(.tableSection), 
+    :local(.chartSection) {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tableSection h3,
+    .chartSection h3 {
+        text-align: center;
+    }
+
+    :local(.buttonContainer) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    :local(.button) {
+        width: 100%;
+    }
+}
+
+  
+  
