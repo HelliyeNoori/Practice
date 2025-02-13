@@ -1,16 +1,16 @@
 .sidebar {
-    position: fixed;
+    position: fixed; 
     width: 106px;
     height: 1982px;
     top: 95px;
     /* left: 1334px;  ba in left jash okey nabood*/ 
     left:1415px;
-    width: 106px; /* عرض سایدبار */
+    width: 106px; 
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #101828;
-    z-index: 1000; /* اگر نیاز به اولویت بندی در لایه‌ها دارید */
+    z-index: 1000; 
   }
   
   .sideimagetop{

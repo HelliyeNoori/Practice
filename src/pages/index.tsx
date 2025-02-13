@@ -1,10 +1,13 @@
-import Navbar from "@/components/Navbar/navbar";
-import AuthBox from "@/components/AuthBox/AuthBox";
+//pushe ha taghir kard 13Feb//
+
+import Navbar from "@/components/Navbar";
+import AuthBox from "@/components/AuthBox";
 import CryptoPriceBox from "@/components/CryptoPriceBox/CryptoPriceBox";
 import styles from "@/styles/Index.module.css";
 import CryptoDashboard from "../components/CryptoDashboard";
 import Sidebox from '../components/Sidebox'
 import TradeBox from "../components/TradeBox";
+import MockRow from "@/components/MockRow/MockRow";
 
 
 export default function Home() {
@@ -20,8 +23,8 @@ export default function Home() {
         <TradeBox />
       </div>
       <Sidebox />
+      <MockRow />
     </div>
-
     
   );
 }

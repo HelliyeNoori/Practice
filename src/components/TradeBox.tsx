@@ -5,7 +5,7 @@ import axios from "axios";
 export default function TradeBox() {
   const [giveAmount, setGiveAmount] = useState(""); // مقدار پرداخت (تومان)
 
-  // تابع ارسال درخواست معامله
+// khoroojie API moshkel dare
   const handleTrade = async () => {
     try {
       const response = await axios.get(
@@ -33,7 +33,7 @@ export default function TradeBox() {
       </div>
 
       <div>
-        {/* بخش پرداخت */}
+        
         <div className={styles.tradeInfoRow}>
           <label>پرداخت میکنم:</label>
           <div className={styles.balanceContainer}>
@@ -42,7 +42,7 @@ export default function TradeBox() {
           </div>
         </div>
 
-        {/* اینپوت مقدار پرداختی (تومان) */}
+        
         <div className={styles.inputWrapper}>
           <input
             className={styles.input}

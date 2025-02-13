@@ -1,3 +1,5 @@
+//13Feb b nazaram oomad chart bayad az modele Donut Chart basje//
+
 import React, { useEffect, useState } from "react";
 import { Pie } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
@@ -5,29 +7,28 @@ import styles from "../styles/CryptoDashboard.module.css";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-// تایپ برای داده‌های هر رمزارز
 interface Coin {
     id: string;
     name: string;
     symbol: string;
-    current_price: number;  
-    market_cap: number;     
-    price_change_percentage_24h: number; 
+    current_price: number;
+    market_cap: number;
+    price_change_percentage_24h: number;
     image: string;
 }
 
-// تایپ برای داده‌های نمودار
 interface ChartData {
     labels: string[];
     datasets: {
         data: number[];
         backgroundColor: string[];
+        cutout: string;  //Donut Chart
     }[];
 }
 
 const CryptoDashboard: React.FC = () => {
     const [chartData, setChartData] = useState<ChartData | null>(null);
-
+//dadehaye jadval dasti zadam//
     const cryptoData: Coin[] = [
         { id: "1", name: "Bitcoin", symbol: "BTC", current_price: 45000, price_change_percentage_24h: 2.5, market_cap: 850000000000, image: "/bitcoin.webp" },
         { id: "2", name: "Ethereum", symbol: "ETH", current_price: 3200, price_change_percentage_24h: -1.2, market_cap: 370000000000, image: "/ethereum.webp" },
@@ -40,16 +41,17 @@ const CryptoDashboard: React.FC = () => {
     useEffect(() => {
         const fetchMarketData = async () => {
             try {
-                const response = await fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd");
+                const response = await fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd");//bar asase marketcap
                 const data: Coin[] = await response.json();
-                const topCoins = data.slice(0, 5);
+                const topCoins = data.slice(0, 6);
 
                 const pieChartData: ChartData = {
                     labels: topCoins.map((coin) => coin.name),
                     datasets: [
                         {
                             data: topCoins.map((coin) => coin.market_cap),
-                            backgroundColor: ["#ff6384", "#36a2eb", "#ffcd56", "#4bc0c0", "#9966ff"],
+                            backgroundColor: ["#147ad5", "#4fa9b7", "#3b97eb", "#6bafed", "#00c2e7", "#89e7f8"],
+                            cutout: "50%",  //Donut Chart//
                         },
                     ],
                 };
@@ -111,6 +113,7 @@ const CryptoDashboard: React.FC = () => {
 };
 
 export default CryptoDashboard;
+
 
 
 
