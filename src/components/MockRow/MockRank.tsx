@@ -16,6 +16,10 @@ const MockRank = () => {
 export default MockRank;
 
 
+
+// hazfe Margin-Left // 
+// ba margin left nashod too ye radif  gharar bedam///
+
 const Box = styled.div`
     width: 327px;
     height: 205px;

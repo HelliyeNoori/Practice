@@ -34,6 +34,9 @@ export default MockPoint;
 
     /*taghir dadam margin-top */
 
+// hazfe Margin-Left // 
+// ba margin left nashod too ye radif  gharar bedam///
+
 const Box = styled.div`
     background-color: #101828;
     width: 489px;
@@ -105,12 +108,11 @@ const PointImg = styled.div`
 const ChartImg = styled.div`
     position: absolute;
     margin-top: -15px;
-    margin-left: -10px;
     border-radius: 2.25px;
     height: 100%;
     width: 100%;
     object-fit: cover;
-    left: -553.4px;  // dasti//// charte abi rooye sefid //
+    left: -563px;  // dasti//// charte abi rooye sefid //
 `;
 
 

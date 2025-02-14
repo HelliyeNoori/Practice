@@ -8,6 +8,8 @@ import CryptoDashboard from "../components/CryptoDashboard";
 import Sidebox from '../components/Sidebox'
 import TradeBox from "../components/TradeBox";
 import MockRow from "@/components/MockRow/MockRow";
+import CryptoTable from "../components/CryptoTable";
+
 
 
 export default function Home() {
@@ -24,6 +26,7 @@ export default function Home() {
       </div>
       <Sidebox />
       <MockRow />
+      <CryptoTable />
     </div>
     
   );

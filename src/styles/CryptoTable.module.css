@@ -1,0 +1,103 @@
+
+.container{
+    width: 1286px;
+    height: 917px;
+    margin-top: 20px;  /*bar asase radife bala*/
+    margin-left: 50px;
+    border-radius: 16px;
+    border: 1px;
+    box-shadow: 2px 2px 8px 0 #1013661A;
+    background-color: #101828;
+}
+.container h1 {
+    width: 159px;
+    height: 34px;
+    padding-top: 50px;  /*taghir dadam*/
+    margin-left: 1090px; /*taghir dadam*/
+    font-family: peyda;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33.6px;
+    text-align: right;
+    color: #FFFFFF;
+
+  }  
+
+  .cryptoTable {
+    width: 100%;
+    
+  }
+  
+  .headerCell {
+    border: none;
+    text-align: center;
+    width: 1218px;
+    height: 32px;
+    margin-top: 82px;
+    margin-left: 45px;
+    font-size: 20px;
+    font-family: peyda;
+    font-weight: 500;
+    line-height: 25px;
+    color: #E7E9E8;
+  }
+
+  .cell {
+    border: none;
+    text-align: center;
+    gap: 16px;
+    margin-top: 1px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 16px;
+    font-family: peyda;
+    font-weight: 400;
+    line-height: 22.4px;
+    color: #FFFFFF;
+  }
+  
+  .coinName {
+    font-size: 16px;
+    font-family: peyda;
+    gap: 20px;
+    font-weight: 400;
+    line-height: 22.4px;
+  }
+
+  .coinLogo {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    border-radius: 15px;
+  }
+  
+  .cryptoImage {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .showMoreButton {
+    margin-left: 609px; /*baraye inke vasat bashe*/
+    width: 133px;
+    height: 32;
+    font-family: peyda;
+    font-size: 14px;
+    padding: 8px 16px 8px 16px;
+    font-size: 16px;
+    color: #0257EA;
+    background-color: transparent; /*hazfe range paszamine*/
+    border: none;
+    outline: none;
+  }
+
+  /*navasanha*/
+  .positiveChange { 
+    color: #00966D; 
+  }
+  
+  .negativeChange {
+    color: #ED2E2E; 
+  }
+  
+  
+  

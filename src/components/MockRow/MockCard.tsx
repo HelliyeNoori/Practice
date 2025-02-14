@@ -10,6 +10,9 @@ const MockCard = () => {
 
 export default MockCard;
 
+// hazfe Margin-Left // 
+// ba margin left nashod too ye radif  gharar bedam///
+
 const Box = styled.div`
     width: 422px;
     height: 205px;
