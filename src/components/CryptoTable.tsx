@@ -41,9 +41,9 @@ const CryptoTable = () => {
           <tr>  
             <th className={styles.headerCell}>نام </th>
             <th className={styles.headerCell}> آخرین قیمت(تومان)</th>
-            <th className={styles.headerCell}>حجم بازار</th>
-            <th className={styles.headerCell}> %24h</th>
-            <th className={styles.headerCell}> 7 روز گذشته </th> 
+            <th className={styles.headerCell}> %24H </th>
+            <th className={`${styles.headerCell} ${styles.hideOnMobile}`}>حجم بازار</th>
+            <th className={`${styles.headerCell} ${styles.hideOnMobile}`}> 7 روز گذشته </th> 
           </tr>
         </thead>
         <tbody>
@@ -56,7 +56,9 @@ const CryptoTable = () => {
   {/* natoonestam tasvire khat ezafe konam khataye <hydration> dashtam ba taghirat dorost nashod */}
 
               <td className={styles.cell}>{(coin.current_price * 85000).toLocaleString()}</td>
-              <td className={styles.cell}>{coin.market_cap.toLocaleString()}</td>
+              <td className={`${styles.cell} ${styles.hideOnMobile}`}>
+           {coin.market_cap.toLocaleString()}
+           </td>
               <td className={styles.cell}>
                 <span
                   className={`${styles.changePercentage} ${getChangeColor(coin.price_change_percentage_24h)}`}
@@ -64,18 +66,15 @@ const CryptoTable = () => {
                   {formatPercentage(coin.price_change_percentage_24h)}
                 </span>
               </td>
-              <td className={styles.cell}> 
-                <img className={styles.defaultImage} src="/Group 3.png" alt="chart"/>
+              <td className={`${styles.cell} ${styles.hideOnMobile}`}>
+          <img className={styles.defaultImage} src="/Group 3.png" alt="chart"/>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
       {visibleCount < data.length && (
-        <button
-          className={styles.showMoreButton}
-          onClick={() => setVisibleCount(visibleCount + 20)}
-        >
+        <button className={styles.showMoreButton} onClick={() => setVisibleCount(visibleCount + 20)}>
           مشاهده بیشتر
         </button>
       )}

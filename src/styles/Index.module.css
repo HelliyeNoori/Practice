@@ -1,6 +1,4 @@
 /* responsive nashode*/
-
-
 .body { 
   direction: rtl;
   font-family: peyda;
@@ -101,18 +99,6 @@
   margin-bottom: 5px;
 }
 
-@media (max-width: 760px) {
-  .crypto-box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .crypto-item {
-    width: 45%; 
-  }
-}
-
 
 .tradeBox {
   padding: 16px;
@@ -163,21 +149,6 @@
 .button:hover {
   background-color: #0056b3;
 }
-
-
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .crypto-dashboard,
-  .crypto-pricebox,
-  .tradeBox {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
 }
 
 /*  kenare ham gharar gereftane CryptoDashboard&Tradebox */
@@ -188,7 +159,6 @@
   align-items: flex-start;
   gap: 24px;
   width: 100%;
-  margin: auto;
 }
 
 .dashboardSection  {
@@ -202,15 +172,50 @@
   max-width: 0;
 }
 
-/* MOBILE zire yekdigar*/
+
+
+/*baraye tartibbandi gozashtam */
+/* too index.tsx ham eslahat dashtam*/
+/* moafaghiatamiz nabood*/
+/*
 @media (max-width: 768px) {
-  .mainContent {
+  .container {
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 20px;
   }
 
-  .dashboardSection,
-  .tradeSection {
-    width: 100%;
+  .navbar {
+    order: 1;
   }
-}
+
+  .cryptoPriceBox {
+    order: 2;
+  }
+
+  .cryptoDashboard {
+    order: 3;
+  }
+
+  .mockPoint {
+    order: 4;
+  }
+
+  .mockRank {
+    order: 5;
+  }
+
+  .tradeBox {
+    order: 6;
+  }
+
+  .mockCard {
+    order: 7;
+  }
+
+  .cryptoTable {
+    order: 8;
+  }
+
+}*/
+

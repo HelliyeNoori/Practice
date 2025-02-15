@@ -99,5 +99,47 @@
     color: #ED2E2E; 
   }
   
-  
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .container h1 {
+        font-size: 18px;
+        padding-top: 10px;
+    }
+
+    .cryptoTable {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .headerCell {
+        font-size: 16px;
+        padding: 6px;
+    }
+
+    .cell {
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    .coinName {
+        font-size: 12px;
+        gap: 4px;
+    }
+
+    .coinLogo {
+        width: 18px;
+        height: 18px;
+    }
+}
   

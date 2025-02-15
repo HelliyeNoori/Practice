@@ -19,11 +19,8 @@ const MockPoint = () => {
     
 
         <PointImg>
-    <img src="/EllipseE.png" alt="none" />
+    <img src="/Ellipsse.png" alt="none" />
         </PointImg>
-        <ChartImg>
-    <img src="/Ellipse.png" alt="none" />
-        </ChartImg>
         </PointBox> 
         </Box>;
 
@@ -45,6 +42,16 @@ const Box = styled.div`
     border: 1px solid #E9E9E90D ;
     text-align: rtl;
     box-shadow: -2px 2px 15px -1px rgba(113, 113, 113, 0.12);
+
+
+    @media (max-width: 768px) {
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
 `;
 
 const Title = styled.div`
@@ -58,23 +65,40 @@ const Title = styled.div`
     line-height: 22.5px;
     align: right;
     color: #FFFFFF;
+
+
+     @media (max-width: 768px) {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        margin-right:40px;
+    }
 `;
 
 const PointBox = styled.div`
-    display: flex;
+     display: flex;
     direction: rtl;
     width: 376px; 
     height: 74px;
-    margin-top: 50px;
-    margin-left: 30px;
+    margin-top: 60px;
+    margin-left: 56.5px;
     gap: 27px;
-    align: center:
+    align-items: center;  
+    
+    @media (max-width: 768px) {
+        flex-direction: column;
+        width: 346px;
+        margin-top: 30px;
+        margin-left: 100px;
+        gap: 12px; 
+    }
 `;
 
 const Content = styled.div`
     display:flex;
     width: 207px;
     height: 43px;
+    text-align: right;
     gap:18px;
     font-family: peyda;
     font-size: 12px;
@@ -82,6 +106,13 @@ const Content = styled.div`
     line-height: 16.8px;
     color: #E7E9E8;
     align: center:
+
+    @media (max-width: 768px) {
+        width: 207px;
+        
+        text-align: center;
+        
+    }
 `;
 
 const PointText = styled.div`
@@ -89,31 +120,35 @@ const PointText = styled.div`
     position: absolute;
     width: 142px;
     height: 74px;
-    margin-right: 305px;   // dasti //
+    margin-right: 290px;   // dasti //
     font-family: peyda;
     font-size: 12px;
     font-weight: 400;
     line-height: 16.8px;
     color: #E7E9E8;
+
+    @media (max-width: 768px) {
+        margin-top:10px;
+        text-align: center;
+        margin-right: 450px;
+    }
 `;
 
 const PointImg = styled.div`
-    width: 142px; 
-    height: 74px;
-    margin-top: -15px;
-    margin-left: -10px:
+    width: 160px; 
+    margin-top: -30px;
+    margin-left: -20px:
     border-radius: 2.25px;
-    object-fit: cover;
+    background-color: #101828;
+
+    @media (max-width: 768px) {
+        width: 107.26px;
+        height: 58px;
+        margin-right: 270px;
+        margin-top: -80px;
+    }
 `;
-const ChartImg = styled.div`
-    position: absolute;
-    margin-top: -15px;
-    border-radius: 2.25px;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    left: -563px;  // dasti//// charte abi rooye sefid //
-`;
+
 
 
 

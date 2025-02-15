@@ -21,15 +21,38 @@ const Container = styled.div`
     }
 `;
 
+const MockPointWrapper = styled.div`
+  @media (max-width: 768px) {
+    order: -1; /* tartibe namayesh 1*/
+    }
+`;
+
+// استایل برای MockCard
+const  MockRankWrapper = styled.div`
+@media (max-width: 768px) {
+    order: 0; 
+  }
+`;
+
+// استایل برای MockRank
+const MockCardWrapper = styled.div`
+    @media (max-width: 768px) {
+    order: 1;
+  }
+`;
+
 const MockRow = () => {
     return (
         <Container>
-            <MockCard />
-            <MockRank />
-            <MockPoint />
-            
-            
-            
+            <MockCardWrapper>
+                <MockCard />
+            </MockCardWrapper>
+            <MockRankWrapper>
+                <MockRank />
+            </MockRankWrapper>
+            <MockPointWrapper>
+                <MockPoint />
+            </MockPointWrapper>
         </Container>
     );
 };

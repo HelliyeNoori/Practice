@@ -28,6 +28,12 @@ const Box = styled.div`
     border: 1px solid #E9E9E90D ;
     text-align: rtl;
     box-shadow: -2px 2px 15px -1px rgba(113, 113, 113, 0.12);
+
+    @media (max-width: 768px) {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
 `;
 
 const UpperImage = styled.div`
@@ -35,6 +41,12 @@ const UpperImage = styled.div`
     height: 28px;
     margin-top: 35px;
     margin-left: 28px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
 `;
 
 const LowerImage = styled.div`
@@ -45,4 +57,13 @@ const LowerImage = styled.div`
     border-radius: 8px;
     padding-top: 8px;
     padding-bottom: 8px;
+
+
+    @media (max-width: 768px) {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        text-align: center;
+        margin-top: 30px;
+    }
 `;

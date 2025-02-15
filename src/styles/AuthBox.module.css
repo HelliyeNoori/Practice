@@ -1,3 +1,5 @@
+/*Responsive Okey*/
+
 
 .auth-box {
   display: flex;
@@ -56,5 +58,33 @@
   
   .auth-button:hover {
     background: #1e40af;
+  }
+  
+
+/*moshkel dare*/
+
+  @media (max-width: 768px) {
+    .auth-box {
+      width: 380PX;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /*rast b chap*/
+      align-items: right;
+      height: auto;
+      padding: 12px 16px ;
+      margin-top: 30px; /*nesbat b navbar*/
+      gap: 23px;
+    }
+  
+    .auth-text {
+      display: block; /* rafe khataye jam shodane matn samte chap*/
+      width: auto;  
+    }
+  
+    .auth-button {
+      width: 90px; /*taghir dadam*/
+      max-width: 150px;
+      text-align: center;
+    }
   }
   

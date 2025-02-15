@@ -1,3 +1,6 @@
+/*Responsive Okey*/
+
+
 .cryptoContainer {
   display: flex;
   flex-direction: row; /* too ye radif */
@@ -8,6 +11,9 @@
   margin-top: 50px; /*taghir dadam*/
   margin-left: 470px; 
   flex-wrap: nowrap; 
+  background-color: transparent; /*hazfe range paszamine*/
+  border: none;
+  outline: none;
 }
 
 
@@ -22,7 +28,7 @@
   justify-content: flex-end; 
   align-items: center;
   text-align: center;
-  box-shadow: -2px 2px 15px -1px rgba(0, 0, 0, 0.1);
+box-shadow: -2px 2px 15px -1px rgba(113, 113, 113, 0.12);
 }
 
 
@@ -37,11 +43,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: -2px 2px 15px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: -2px 2px 15px -1px rgba(113, 113, 113, 0.12);
 }
 
 
 .cryptoIcon {
+  border-radius: 30px;
   width: 59.65px;
   height: 59.23px;
 }
@@ -75,25 +82,31 @@
 /*  mobile */
 @media (max-width: 760px) {
   .cryptoContainer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap; /* bere radife baad*/
+    align-items: center; /*nagereft!!*/
+    width: 380px;
+    height: 137px;
+    margin-top: 20px;
     gap: 15px;
   }
 
   .cryptoItem {
     width: 182px; 
-    height: 137px;
+    height: 106.38pxpx; 
+    margin-top: 30px;
+    gap:16px;
   }
 
   .cryptoIconWrapper {
     width: 56.54px;
     height: 59.23px;
-    top: -10px; /*dayere var shodane balaye moraba*/
+    top: -10px; /* dayere var shodane balaye moraba */
   }
 
   .cryptoIcon {
-    width: 35px;
-    height: 35px;
+    width: 56.54px;
+    height: 59.23px;
   }
 }
 

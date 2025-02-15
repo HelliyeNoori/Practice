@@ -115,37 +115,59 @@
 }
 
 
-/* mobile*/
+
+/* mobile */
 @media (max-width: 768px) {
     :local(.dashboardContainer) {
         flex-direction: column;
         align-items: center;
-        width: 100%;
-        margin-left: 0;
-        padding: 15px;
+        width: 380px;
+        height: 902px;
+        border-radius: 12px;
+        border: 1px solid #E9E9E90D;
+        margin-top: 250px;
     }
 
-    :local(.tableSection), 
     :local(.chartSection) {
-        width: 100%;
+        width: 268px;
+        height: 402px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        text-align: center;
+        margin-top: 31px;
+        gap: 32px;
     }
 
-    .tableSection h3,
+    :local(.tableSection) {
+        width: 356px;
+        height: 404px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 80px; /*dasti*/
+    }
+
+    /* مخفی کردن عنوان h3 جدول */
+    .tableSection h3 {
+        display: none;
+    }
+
     .chartSection h3 {
         text-align: center;
     }
 
     :local(.buttonContainer) {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
         align-items: center;
     }
 
     :local(.button) {
-        width: 100%;
+        width: 349px;
+        height: 32px;
+        gap: 20px;
+        margin-left: 20px;
     }
 }
 
-  
   

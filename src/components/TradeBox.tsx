@@ -3,7 +3,7 @@ import styles from "@/styles/TradeBox.module.css";
 import axios from "axios";
 
 export default function TradeBox() {
-  const [giveAmount, setGiveAmount] = useState(""); // مقدار پرداخت (تومان)
+  const [giveAmount, setGiveAmount] = useState(""); // pardakhti tomane
 
 // khoroojie API moshkel dare
   const handleTrade = async () => {
@@ -72,14 +72,24 @@ export default function TradeBox() {
           معامله
         </button>
       </div>
-      <div className={styles.footertradebox}>
-        <h3>معاملاتباز </h3>
-        <img src="/more.png" alt="more" className={styles.Iconfootertradebox} />
 
+      <div className={styles.footertradebox}>
+        <h3>معاملات باز </h3>
+        <img src="/more.png" alt="more" className={styles.Iconfootertradebox} />
       </div>
-    </div>
+
+
+{/* mavarede namayeshi baraye MOBILE */}
+
+<div className={styles.mobileImages}>
+          <img src="/Frame 1261154303.png" alt="image1" className={styles.mobileImage} />
+          <img src="/Frame 1261154233.png" alt="image2" className={styles.mobileImage} />
+          <img src="/Frame 1261154495.png" alt="image3" className={styles.mobileImage} />
+        </div>
+      </div>
   );
 }
+
 
 
 

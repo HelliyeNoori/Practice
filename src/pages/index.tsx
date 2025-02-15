@@ -11,7 +11,6 @@ import MockRow from "@/components/MockRow/MockRow";
 import CryptoTable from "../components/CryptoTable";
 
 
-
 export default function Home() {
   return (
     <div className={styles["container"]}>

@@ -1,3 +1,5 @@
+//responsive Okey
+
 
 import styled from 'styled-components';
 import React from "react";
@@ -43,11 +45,25 @@ const NavContainer = styled.nav`
   left: 0;
   z-index: 1000;
   direction: rtl;
+
+
+
+    @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 const Logo = styled.div`
   display: flex;
   align-items: center;
+
+
+
+    @media (max-width: 768px) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 `;
 
 const LogoImage = styled.img`
@@ -72,6 +88,11 @@ const NavLinks = styled.div`
   margin-left: 674.06px;
   margin-top: 10px;
   align-items: center;
+
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const NavLink = styled.a`
@@ -102,4 +123,9 @@ const UserIcons = styled.div`
   color: white;
   margin-left: 51px;
 
+  @media (max-width: 768px) {
+    display: flex;
+    position: absolute;
+    left: 20px;
+  }
 `;
