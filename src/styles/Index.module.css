@@ -177,14 +177,16 @@
 /*baraye tartibbandi gozashtam */
 /* too index.tsx ham eslahat dashtam*/
 /* moafaghiatamiz nabood*/
-/*
+
 @media (max-width: 768px) {
+  
   .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     gap: 20px;
   }
 
+ 
   .navbar {
     order: 1;
   }
@@ -207,6 +209,7 @@
 
   .tradeBox {
     order: 6;
+    display: block;
   }
 
   .mockCard {
@@ -216,6 +219,43 @@
   .cryptoTable {
     order: 8;
   }
+  /* اطمینان از این که سایر بخش‌ها درست نمایش داده شوند */
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;  /* ایجاد فاصله بین بخش‌ها */
+  }
 
-}*/
+  .dashboardSection {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .tradeSection {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .sidebox {
+    width: 100%;
+  }
+
+  /* اطمینان از اینکه تمام بخش‌ها به درستی جاگذاری شوند */
+  .crypto-box {
+    display: block;
+    margin-top: 15px;
+  }
+
+  .crypto-item {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .mockRow, .cryptoTable {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
 

@@ -18,4 +18,10 @@ const Box = styled.div`
     height: 205px;
     border-radius: 16px;
     box-shadow: 0px 4.05px 4.05px 0px rgba(0, 0, 0, 0.25);
+
+@media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+     }
 `;

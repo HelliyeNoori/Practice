@@ -33,6 +33,7 @@ const Box = styled.div`
         width: 90%;
         height: auto;
         padding: 20px;
+        margin-top:20px;
     }
 `;
 

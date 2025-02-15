@@ -157,26 +157,34 @@
 
 
  /* Mobile */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
+
+  .container {
+    display: flex;
+    flex-direction: column;  
+    gap: 20px;
+  }
+
 
   .tradeBox {
-    width: 90%; 
-    height: 658px; 
+    order: 6;  
+    width: 90%;
+    height: 658px;
     padding: 16px;
+    margin: 10px auto; 
   }
 
   .tabContainer {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-align: center;
     width: 100%;
   }
 
   .tradeInfoRow {
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: row;
     align-items: center;
-    text-align: center;
+    text-align: right;
   }
 
   .input {
@@ -193,8 +201,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 270px;
-    text-align: center;
+    gap: 220px;
+    text-align: right;
   }
 
   .moreInfoButton {
@@ -214,22 +222,22 @@
     color: white;
   }
 
-  
   .mobileImages {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: 20px; 
+    margin-top: 20px;
   }
 
   .mobileImage {
-    width: 100%; 
-    max-width: 320px; 
-    height: auto; 
+    width: 100%;
+    max-width: 320px;
+    height: auto;
     border-radius: 8px;
   }
 }
+
 
 
   
