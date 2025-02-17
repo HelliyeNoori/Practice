@@ -3,14 +3,22 @@ import styles from "@/styles/TradeBox.module.css";
 import axios from "axios";
 
 export default function TradeBox() {
-  const [giveAmount, setGiveAmount] = useState(""); // pardakhti tomane
+  const [giveAmount, setGiveAmount ] = useState(""); // pardakhti tomane
 
 // khoroojie API moshkel dare
-  const handleTrade = async () => {
-    try {
-      const response = await axios.get(
-        `https://test.tetherland.app/api/v5/user/converter/submit?give=IRT&give_amount=${giveAmount}`
-      );
+// too jalase motevajeh shodam
+const handleTrade = async () => {
+  try {
+    const response = await axios.get(
+      `https://test.tetherland.app/api/v5/user/converter/submit?give=USDT&give_amount=${giveAmount} & receive=SHIB`,
+      {
+        headers: {
+          Authorization: "Bearer 1299570|rXMGiTXeQL2vNCXoj7I8V0AEhqZ0Ln5fGM97bC1I",
+        },
+      }
+    );
+
+
 
       if (response.data) {
         alert(response.data.message || "معامله با موفقیت انجام شد!");
